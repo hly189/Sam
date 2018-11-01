@@ -10,6 +10,7 @@ create a object, call the methods and display the the result.
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class CircleGUIApp extends JFrame {
 	private JPanel panel; // Set panel preferences
@@ -34,41 +35,31 @@ public class CircleGUIApp extends JFrame {
 		// Build Panel
 		buildPanel();
 
+		// add Panel
+		add(panel);
+
 		// Display the window.
 		setVisible(true);
 	}
 	private void buildPanel(){
 		messageLabel = new JLabel("Enter Radius ");
+		radiusTextField = new JTextField(10);
+		submitButton = new JButton("Submit");
+		exitButton = new JButton("Exit");
+		panel = new JPanel();
+		panel.add(messageLabel);
+		panel.add(radiusTextField);
+		panel.add(submitButton);
+		panel.add(exitButton);
+	}
+	private class addButtonListioner implements ActionListener {
+
 	}
 	/************************************
 	 * Main Class of CircleApp
 	 ************************************/
 	public static void main(String[] args) {
 		new CircleGUIApp();
-		//boolean inputValidation = false;
-		//double radiusInput = 0.0;
-		//do {
-		//	try {
-		//		radiusInput = Double.parseDouble(JOptionPane.showInputDialog("Please Enter Radus:"));
-		//		try {
-		//			if (radiusInput > 0.0) {
-		//				inputValidation = true;
-		//			}else{
-		//				throw new NegativeDoubleException();
-		//			}
-		//		} catch (NegativeDoubleException negative) {
-		//			System.out.println(negative.getMessage());
-		//		}
-		//	} catch (NumberFormatException e) {
-		//		System.out.println("Input format must be double type");
-		//	}
-		//} while (inputValidation == false);
 
-		//System.out.println("This is radius: " + radiusInput);
-		//Circle thiscircle = new Circle();
-		//thiscircle.setRadius(radiusInput);
-		//System.out.println("This is Area: " + thiscircle.computeArea());
-		//System.out.println("This is Circumefence: " + thiscircle.computeCircumference());
-		//System.out.println("This is Diameter: " + thiscircle.computeDiameter());
 	}
 }

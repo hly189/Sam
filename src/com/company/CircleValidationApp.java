@@ -9,12 +9,6 @@ create a object, call the methods and display the the result.
 
 import javax.swing.JOptionPane;
 
-class NegativeDoubleException extends Exception{
-	NegativeDoubleException(){
-		super("Input must be positive number");
-	}
-}
-
 public class CircleValidationApp // Driver class
 {
 	/************************************
