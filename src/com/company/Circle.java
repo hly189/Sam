@@ -1,3 +1,4 @@
+package com.company;
 /******************************************************************************************
 Name: Thanh Le
 Course:CS125-01 
@@ -6,7 +7,7 @@ Submission Date: 8:00pm, Wed (9/20)
 Brief Description: Part 1 - Circle operation class - Declare radius, compute Diameter, 
 Area and Circumfence based on the radius. 
 ********************************************************************************************/
-public class Circle                    //
+public class Circle
 {
 	
     private double radius;
