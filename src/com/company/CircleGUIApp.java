@@ -79,13 +79,18 @@ public class CircleGUIApp extends JFrame {
 			do{
 				try {
 					String input = radiusTextField.getText();
+					if (input.isEmpty()){
+						JOptionPane.showMessageDialog(null,"Input is empty", "Warning", JOptionPane.WARNING_MESSAGE);
+						return;
+					}
 					radiusInput = Double.parseDouble(input);
 					try{
-							if (radiusInput > 0.0) {
-								radiusValidation = true;
-							}else{
-								throw new NegativeDoubleException();
-							}
+						if (radiusInput > 0.0) {
+							radiusValidation = true;
+						} else {
+							throw new NegativeDoubleException();
+						}
+
 					}catch (NegativeDoubleException negative){
 						radiusTextField.setText("");
 						JOptionPane.showMessageDialog(null,negative.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
