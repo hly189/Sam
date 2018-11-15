@@ -41,6 +41,9 @@ public class CircleGUI extends JFrame                  //
         // add Panel
         add(panel);
 
+        //add to center
+        setLocationRelativeTo(null);
+
         // Display the window.
         setVisible(true);
     }
