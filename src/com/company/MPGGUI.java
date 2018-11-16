@@ -81,10 +81,6 @@ public class MPGGUI extends JFrame                  //
         panel.add(gallonTextField, right);
         panel.add(submitButton, left);
         panel.add(exitButton, right);
-       // frame.pack();
-        //frame.setVisible(true);
-        //panel.add(submitButton);
-        //panel.add(exitButton);
     }
 
     private class exitButtonListioner implements ActionListener{
