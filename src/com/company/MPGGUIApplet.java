@@ -17,7 +17,6 @@ public class MPGGUIApplet extends JApplet                  //
 {
 
     private JPanel panel; // Set panel preferences
-    private JFrame frame;
     private JLabel mileMessageLabel; // Set Mile Label preference
     private JLabel galloneMessageLabel; // Set Gallon Label preference
     private JTextField mileTextField; // set Miles Text Field preference
@@ -46,7 +45,6 @@ public class MPGGUIApplet extends JApplet                  //
     }
 
     private void buildPanel(){
-        frame = new JFrame();
         mileMessageLabel = new JLabel("Enter Miles");
         mileTextField = new JTextField(40);
 
