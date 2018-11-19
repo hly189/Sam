@@ -25,7 +25,7 @@ public class MPGGUI extends JFrame                  //
     private JButton submitButton; // set submit Button Text Field
     private JButton exitButton; // set Exit Button Text Field
     private final int WINDOW_WIDTH = 310;
-    private final int WINDOW_HEIGHT = 200;
+    private final int WINDOW_HEIGHT = 150;
 
     public MPGGUI() {
         // Set call JFrame Constructor
