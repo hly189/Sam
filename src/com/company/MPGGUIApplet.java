@@ -37,6 +37,9 @@ public class MPGGUIApplet extends JApplet                  //
         // Build Panel
         buildPanel();
 
+        // Set to the middle
+        title.setLocationRelativeTo(null);
+
         // add Panel
         add(panel);
 
