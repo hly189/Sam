@@ -37,11 +37,14 @@ public class MovingBanner extends JApplet                  //
 
         // Display the window.
         setVisible(true);
+
+        //Set center
+        title.setLocationRelativeTo(null);
     }
 
     private void buildPanel(){
         messageLabel = new JLabel("Enter Text");
-        messageTextField = new JTextField(40);
+        messageTextField = new JTextField(80);
 
 
         submitButton = new JButton("Submit");
@@ -99,6 +102,7 @@ public class MovingBanner extends JApplet                  //
         public void actionPerformed (ActionEvent e){
             String input = messageTextField.getText();
             JFrame frame = new JFrame();
+
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.getContentPane().setBackground(backgroundColor);
             frame.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
@@ -115,6 +119,7 @@ public class MovingBanner extends JApplet                  //
                 super.paint(graphics);
                 Graphics2D gd2d = (Graphics2D)graphics;
                 gd2d.setFont(new Font("Bold", Font.BOLD,22));
+                gd2d.setColor(fontColor);
                 graphics.drawString(message, x, y);
                 try{
                     Thread.sleep(100);
